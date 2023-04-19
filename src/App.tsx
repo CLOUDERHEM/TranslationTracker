@@ -8,7 +8,7 @@ const { TabPane } = Tabs;
 
 const App: React.FC = () => {
     return (
-        <Card size="default" title="Translation Recorder" style={{ width: 300 }}>
+        <Card size="default" title="Translation Tracker" style={{ width: 300 }}>
             <Tabs defaultActiveKey="1">
                 <TabPane tab="Main" key="1">
                     <Main />
