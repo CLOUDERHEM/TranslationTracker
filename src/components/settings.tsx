@@ -14,11 +14,9 @@ const Settings: React.FC = () => {
 
     return (
         <div>
-            <Tooltip placement="bottom" title={"save as a json file"}>
+            <Tooltip placement="bottom" title={"save all as json file"}>
                 <Button onClick={exportAll}>
-                    <div className={"download-text"}>
-                        Download all records
-                    </div>
+                    DOWNLOAD
                 </Button>
             </Tooltip>
         </div>
