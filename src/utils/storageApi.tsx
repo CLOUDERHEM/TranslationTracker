@@ -2,9 +2,9 @@ import axios from "axios";
 import Config from "~src/config";
 import type TrRecord from "~src/interfaces/TrRecord";
 
-const tableName = Config.storageClassName;
+const DATA_CLASS_NAME = Config.storageClassName;
 
-const url = `${Config.serverURL}/1.1/classes/${tableName}`;
+const url = `${Config.serverURL}/1.1/classes/${DATA_CLASS_NAME}`;
 const headers = {
     "X-LC-Id": Config.appId,
     "X-LC-Key": Config.appKey,
@@ -29,7 +29,6 @@ function post(data: TrRecord) {
             headers
         }).then(res => {
             resolve(res.data);
-            console.log(res.data);
         }).catch(e => {
             reject(e);
         });
@@ -42,7 +41,6 @@ function deleteOne(objectId) {
             headers
         }).then(res => {
             resolve(res.data);
-            console.log(res.data);
         }).catch(e => {
             reject(e);
         });
@@ -51,5 +49,5 @@ function deleteOne(objectId) {
 
 
 export const StorageApi = {
-    get, post
+    get, post, deleteOne
 };

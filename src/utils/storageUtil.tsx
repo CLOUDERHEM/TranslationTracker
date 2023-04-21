@@ -12,6 +12,10 @@ const StorageUtil = {
         return StorageApi.get();
     },
 
+    deleteRecord: (objectId) => {
+        return StorageApi.deleteOne(objectId);
+    },
+
     exportAll: (filename: string) => {
         return new Promise((resolve, reject) => {
             StorageApi.get().then(res => {
