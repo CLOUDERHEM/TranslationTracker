@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, message, Tooltip } from "antd";
+import { Button, Divider, message, Tooltip } from "antd";
 
 import "./settings.css";
 import StorageUtil from "~src/utils/storageUtil";
@@ -15,10 +15,22 @@ const Settings: React.FC = () => {
     return (
         <div>
             <Tooltip placement="bottom" title={"save all as json file"}>
-                <Button onClick={exportAll}>
+                <Button className={'btn'} onClick={exportAll}>
                     DOWNLOAD
                 </Button>
             </Tooltip>
+
+            <Divider/>
+
+            <Button
+                className={'btn'}
+                onClick={() => {
+                chrome.tabs.create({
+                    url: "./tabs/manage.html"
+                }).then();
+            }}>
+                MANAGE
+            </Button>
         </div>
     );
 };
