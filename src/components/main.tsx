@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { List, message } from "antd";
 import StorageUtil from "~src/utils/storageUtil";
 import type TrRecord from "~src/interfaces/TrRecord";
-
+import './main.css'
 
 const Main: React.FC = () => {
 
@@ -28,7 +28,7 @@ const Main: React.FC = () => {
 
                 return (<List.Item>
                     <strong>{item.origin}</strong> : {item.target}
-                    <span>{nowStr}</span>
+                    <span className={'right'}>{nowStr}</span>
                 </List.Item>);
             }}
         />
