@@ -4,6 +4,10 @@ import { Button, Card, message, Popconfirm, Table, Tag } from "antd";
 import StorageUtil from "~src/utils/storageUtil";
 import "antd/dist/reset.css";
 
+const dateFormat = (date)=>{
+    // before: 2022-08-26T08:14:46.531Z
+    return date.replace('T',' ').replace('Z', ' ')
+}
 
 const columns = [
     {
@@ -38,12 +42,14 @@ const columns = [
     {
         title: "createdAt",
         dataIndex: "createdAt",
-        key: "createdAt"
+        key: "createdAt",
+        render:(value)=> dateFormat(value)
     },
     {
         title: "updatedAt",
         dataIndex: "updatedAt",
-        key: "updatedAt"
+        key: "updatedAt",
+        render:(value)=> dateFormat(value)
     },
     {
         title: "manage",
