@@ -81,6 +81,7 @@ const Manage: React.FC = () => {
 
     useEffect(() => {
         StorageUtil.getRecords().then((e) => {
+            e.reverse()
             setTrRecords(e);
         });
     }, []);
