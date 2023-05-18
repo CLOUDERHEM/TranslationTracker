@@ -3,17 +3,18 @@ with [`plasmo init`](https://www.npmjs.com/package/plasmo).
 
 ## Info
 
-This a simple Chrome extension that used in recording the translate history
+This is a simple Chrome extension that records translation history.
 
-When  **paste** the text into textArea, text and the translated will be automatically stored in the cloud platform
+Simply **paste** the word or sentence into the text area, and both the original word/sentence and its translated version
+will be automatically stored in the cloud platform.
 
 ### Feature
 
-* auto record
-* storage sync
-* export records to local file
+* automatically save to cloud storage
+* export records as local file
+* easy manage in web tab
 
-More feats are developing
+More features will be supported in the future.
 
 ### Support
 
@@ -22,12 +23,26 @@ More feats are developing
 * [fanyi.qq.com](https://fanyi.qq.com)
 * [cn.bing.com/translator](https://cn.bing.com/translator)
 
-More web will be added
+More webs will be added
+
+### Screen Shot
+
+1. Using
+   ![img.png](doc/3.png)
+
+2. Main
+   ![img.png](doc/2.png)
+
+3. Setting
+   ![img.png](doc/4.png)
+
+4. Manage tab
+   ![img.png](doc/1.png)
 
 ## Getting Started
 
 1. First you hava to register a new count in [Leancloud](https://leancloud.app/) for storing the data
-2. create a LeanStorage app 
+2. create a LeanStorage app
 3. `Data storage -> data -> create class`, sames to `src/class/TrRecord.tsx`
 4. Rename the `config.sample.tsx` to `config.tsx`
 5. Get `id`, `key` and `serviceUrl` from the Leancloud and set them into the `config.tsx`
